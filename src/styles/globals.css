@@ -1,0 +1,87 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+svg text {
+  stroke: #fff;
+  font-size: 180px;
+  font-weight: 700;
+  stroke-width: 3px;
+  animation: textAnimate 4s infinite alternate;
+}
+
+@keyframes textAnimate {
+  0% {
+    sfill: transparent;
+    stroke-dashoffset: 35%;
+    stroke-dasharray: 0 50%;
+    stroke-width: 3;
+  }
+  70% {
+    fill: transparent;
+
+    stroke-width: 3;
+  }
+  80% {
+    fill: transparent;
+    stroke-width: 3;
+  }
+  100% {
+    fill: transparent;
+    stroke-dashoffset: -35%;
+    stroke-dasharray: 50% 0;
+    stroke-width: 3;
+  }
+}
+
+.otp-input {
+  font-size: 3rem;
+  width: 5rem !important;
+  height: 5rem;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-transform: uppercase;
+  margin: 10px;
+  border: none;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px) !important;
+  border-radius: 10px;
+}
+
+.otp-input:focus {
+  outline: none;
+  border: 1px solid white;
+}
+
+::selection {
+  background: none;
+  color: none;
+}
+
+@media screen and (max-width: 640px) {
+  .otp-input {
+    width: 3rem !important;
+    height: 3rem;
+    font-size: 1.5rem;
+  }
+}
+
+@font-face {
+  font-family: 'Cheque';
+  font-style: normal;
+  font-weight: 500;
+  src: url(/public/fonts/Cheque-Regular.otf) format('truetype');
+}
+
+.quiddle {
+  font-family: 'Cheque', sans-serif;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
